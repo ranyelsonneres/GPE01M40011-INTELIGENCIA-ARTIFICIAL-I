@@ -18,4 +18,4 @@ gosta(lucas, musica).
 %gosta(ana, X).
 
 %todas as pessoas e seus interesses.
-gosta(X, Y).
+%gosta(X, Y).
