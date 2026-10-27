@@ -95,6 +95,31 @@ print("Acurácia inicial na validação:",
       f"{accuracy_score(y_val, previsoes_val):.2%}")
 ```
 
+## Etapa 7.1 - Gráfico de dispersão:
+```pyhton
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Criando um gráfico de dispersão com tremor (jitter) para facilitar a visualização
+plt.figure(figsize=(10, 6))
+sns.stripplot(
+    data=dados,
+    x="Pclass",
+    y="Age",
+    hue="Survived",
+    jitter=0.25,
+    alpha=0.7,
+    palette="Set1"
+)
+
+plt.title("Dispersão de Idade por Classe e Sobrevivência")
+plt.xlabel("Classe (Pclass)")
+plt.ylabel("Idade (Age)")
+plt.legend(title="Sobreviveu (0 = Não, 1 = Sim)")
+plt.grid(axis='y', linestyle='--', alpha=0.5)
+plt.show()
+```
+
 ## Etapa 8 — Avaliar com mais métricas (validação)
 
 ```python
